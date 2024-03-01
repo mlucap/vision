@@ -1,0 +1,17 @@
+#board-container {
+    width: 800px;
+    height: 800px;
+    display: grid;
+    grid-template-columns: repeat(8, 100px);
+    grid-template-rows: repeat(8, 100px);
+}
+.dark {
+    background: #b58863;
+}
+.light {
+    background: #f0d9b5;
+}
+.square {
+    width: 100px;
+    height: 100px;
+}
