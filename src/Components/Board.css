@@ -5,6 +5,15 @@
     grid-template-columns: repeat(8, 100px);
     grid-template-rows: repeat(8, 100px);
 }
+#body-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1em;
+    justify-content: center;
+}
+#scorecard-container {
+    margin: 1em;
+}
 .dark {
     background: #b58863;
 }
@@ -14,4 +23,19 @@
 .square {
     width: 100px;
     height: 100px;
+}
+.header-text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+.text {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+
 }
