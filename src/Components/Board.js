@@ -78,9 +78,9 @@ function ScoreCard({ score, highscore, coordinateToGuess }) {
 			<div>
 				<h1 className="header-text">Find: {coordinateToGuess}</h1>
 				<h1 className="header-text">Highscore</h1>
-				<p className="text">{highscore}</p>
+				<h2 className="text">{highscore}</h2>
 				<h1 className="header-text">Current Score</h1>
-				<p className="text">{score}</p>
+				<h2 className="text">{score}</h2>
 			</div>
 		</div>
 	);
