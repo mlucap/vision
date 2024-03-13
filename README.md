@@ -1,6 +1,6 @@
 # Vision - A chess coordinate guessing game
 
-<img src="https://i.imgur.com/GOmcGWE.png">
+<img src="https://i.imgur.com/jGqrqPU.png">
 
 ## Installation
 
