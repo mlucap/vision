@@ -1,9 +1,15 @@
+:root {
+    --square-size: 3em;
+    --board-size: var(--square-size) * 8;
+}
 #board-container {
-    width: 800px;
-    height: 800px;
+    width: var(--board-size);
+    height: var(--board-size);
+    /* width: 10em;
+    height: 10em; */
     display: grid;
-    grid-template-columns: repeat(8, 100px);
-    grid-template-rows: repeat(8, 100px);
+    grid-template-columns: repeat(8, var(--square-size));
+    grid-template-rows: repeat(8, var(--square-size));
 }
 #body-container {
     display: flex;
@@ -21,8 +27,8 @@
     background: #f0d9b5;
 }
 .square {
-    width: 100px;
-    height: 100px;
+    width: var(--square-size);
+    height: var(--square-size);
 }
 .header-text {
   font-family: "Montserrat", sans-serif;
@@ -38,4 +44,25 @@
   font-style: normal;
   color: white;
 
+}
+#icon-container {
+    display: flex;
+    flex-direction: column;
+}
+#white {
+    margin-top: auto;
+}
+.icon{
+    border-radius: 0.3em;
+    margin-right: 1em;
+    width: 2em;
+    height: 2em;
+}
+#flip-icon {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.3em;
+}
+#flip-board :hover {
+    cursor: not-allowed;
 }

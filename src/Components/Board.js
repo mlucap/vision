@@ -1,11 +1,15 @@
 import { React, useState, useCallback } from 'react';
 import './Board.css';
+import b_400 from '../imgs/black_400.png';
+import w_400 from '../imgs/white_400.png';
+import flip_board from '../imgs/up-down.png';
 
 function Board() {
 	let board = [];
 	const verticalAxis = ['1', '2', '3', '4', '5', '6', '7', '8'];
 	const horizontalAxis = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
 
+	// will change this from using a1 as the first guess
 	const [coordinateToGuess, setCoordinateToGuess] = useState('a1');
 	const [highscore, setHighscore] = useState(0);
 	const [score, setScore] = useState(0);
@@ -51,7 +55,12 @@ function Board() {
 	return (
 		<>
 			<div id="body-container">
+				<Icon />
 				<div id="board-container">{board}</div>
+				{/*eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+				<a id="flip-board">
+					<img src={flip_board} alt="flip board" id="flip-icon" />
+				</a>
 				<ScoreCard
 					score={score}
 					highscore={highscore}
@@ -82,6 +91,15 @@ function ScoreCard({ score, highscore, coordinateToGuess }) {
 				<h1 className="header-text">Current Score</h1>
 				<h2 className="text">{score}</h2>
 			</div>
+		</div>
+	);
+}
+
+function Icon({ colour }) {
+	return (
+		<div id="icon-container">
+			<img src={b_400} alt="icon" className="icon" />
+			<img src={w_400} id="white" alt="icon" className="icon" />
 		</div>
 	);
 }
