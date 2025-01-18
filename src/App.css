@@ -5,3 +5,39 @@
     justify-content: center;
     align-items: center;
 }
+
+.icons {
+    margin: 1rem;
+}
+
+.scorecard {
+    margin: 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: #262522;
+}
+
+.rightcol {
+    display: flex;
+    height: 25rem;
+    flex-direction: column;
+}
+
+#changeOrientation {
+    color: #c6c5c5;
+    background-color: #383734;
+    box-shadow: none;
+    margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+#changeOrientation:hover {
+    background-color: #3f3f3d;
+}
+
+#changeOrientation:active {
+    background-color: #383734;
+}
