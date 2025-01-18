@@ -7,6 +7,13 @@ import { useState } from 'react';
 
 const App = () => {
 	const [iconColour, setIconColour] = useState("white");
+	const [orientation, setOrientation] = useState("white");
+
+	const changeOrientation = () => {
+		setIconColour(iconColour === "white" ? "black": "white");
+		setOrientation(orientation === "white" ? "black": "white");
+	}
+
 	return (
 		<>
 		<Header />
@@ -15,13 +22,13 @@ const App = () => {
 				<Icons colour={iconColour}/>
 			</div>
 			<div className='board'>
-				<Board />
+				<Board orientation={orientation}/>
 			</div>
 			<div className="rightcol">
 				<div className="scorecard">
 					<ScoreCard score={5} highscore={6} coordinateToGuess={"b6"}/>
 				</div>
-				<button id='changeOrientation'>Change orientation</button>
+				<button onClick={changeOrientation} id='changeOrientation'>Change orientation</button>
 			</div>
 		</div>
 		</>
