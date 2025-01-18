@@ -1,12 +1,12 @@
 .icon-container {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 25rem;
 }
 
 .icon {
-    flex: 1;
+    height: auto;
     width: 3rem;
 }
