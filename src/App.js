@@ -67,6 +67,9 @@ const App = () => {
 				<button onClick={changeOrientation} id='changeOrientation'>Change orientation</button>
 			</div>
 		</div>
+		<div className="footer">
+			<a href="https://github.com/mlucap/">github</a>
+		</div>
 		<Analytics />
 		</>
 	);

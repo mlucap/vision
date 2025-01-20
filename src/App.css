@@ -41,3 +41,17 @@
 #changeOrientation:active {
     background-color: #383734;
 }
+
+.footer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+}
