@@ -10,14 +10,18 @@ const App = () => {
 	const [orientation, setOrientation] = useState("white");
 	const [coordinateToGuess, setCoordinateToGuess] = useState("");
 	const [score, setScore] = useState(0);
-	const localHighscore = localStorage.getItem("highscore");
-	const [highscore, setHighscore] = useState(localHighscore !== null ? localHighscore : 0);
+	const [highscore, setHighscore] = useState(0);
 	const [updateGuess, setUpdateGuess] = useState(false);
 
 	const changeOrientation = () => {
 		setIconColour(iconColour === "white" ? "black": "white");
 		setOrientation(orientation === "white" ? "black": "white");
 	}
+
+	useEffect(() => {
+		const localHighscore = localStorage.getItem("highscore");
+		setHighscore(localHighscore !== null ? localHighscore : 0);
+	},[])
 
 	useEffect(() => {
 		const verticalAxis = ['1', '2', '3', '4', '5', '6', '7', '8'];
