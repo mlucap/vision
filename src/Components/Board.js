@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Chessboard from 'chessboardjsx';
 
-const Board = ({orientation}) => {
-  const [clickedSquare, setClickedSquare] = useState(null);
+const Board = ({orientation, handleGuess}) => {
 
   const handleSquareClick = (square) => {
-    console.log(`Square clicked: ${square}`);
-    setClickedSquare(square);
+    handleGuess(square);
   };
 
   return (
