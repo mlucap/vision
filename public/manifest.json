@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Vision",
+  "name": "Vision: Chess coordinate guessing game",
   "icons": [
     {
       "src": "favicon.ico",
