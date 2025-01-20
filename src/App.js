@@ -4,6 +4,7 @@ import Board from './Components/Board.js';
 import Icons from './Components/Icons.js';
 import ScoreCard from './Components/Scorecard.js';
 import { useEffect, useState } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 const App = () => {
 	const [iconColour, setIconColour] = useState("white");
@@ -66,6 +67,7 @@ const App = () => {
 				<button onClick={changeOrientation} id='changeOrientation'>Change orientation</button>
 			</div>
 		</div>
+		<Analytics />
 		</>
 	);
 }
