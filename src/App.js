@@ -10,7 +10,8 @@ const App = () => {
 	const [orientation, setOrientation] = useState("white");
 	const [coordinateToGuess, setCoordinateToGuess] = useState("");
 	const [score, setScore] = useState(0);
-	const [highscore, setHighscore] = useState(localStorage.getItem("highscore"));
+	const localHighscore = localStorage.getItem("highscore");
+	const [highscore, setHighscore] = useState(localHighscore !== null ? localHighscore : 0);
 	const [updateGuess, setUpdateGuess] = useState(false);
 
 	const changeOrientation = () => {
